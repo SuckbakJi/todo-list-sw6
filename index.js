@@ -10,6 +10,7 @@ document.querySelector('.ok').addEventListener('click', ()=>{
     let enter_ul = document.querySelector('.enter');
     let input_check = document.createElement('input');
 
+    enter_li.setAttribute('id', 'mom')
     input_check.setAttribute('type', 'checkbox');
     input_check.setAttribute('id', 'hi'+ count);
     enter_li_label.setAttribute('for', 'hi'+ count);
@@ -19,4 +20,18 @@ document.querySelector('.ok').addEventListener('click', ()=>{
     enter_ul.appendChild(enter_li);
     enter_li.appendChild(enter_li_label);
     enter_li.appendChild(input_check);
+
+
+    enter_li.addEventListener('click', () => {
+        const check = document.querySelector('#hi'+count);
+        const checkcommit = check.checked;
+
+        if(checkcommit == true){
+            enter_li.style.textDecoration = "line-through";
+        }
+        else{
+            enter_li.style.textDecoration = "none";
+        } 
+    })
+    
 })

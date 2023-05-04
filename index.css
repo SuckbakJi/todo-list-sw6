@@ -55,11 +55,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    width: 95%;
     line-height: auto;
 }
 .enter li:hover label {
     overflow: visible;
     white-space: normal;
+    word-wrap: break-word;
     font-size: 4px;
 }
